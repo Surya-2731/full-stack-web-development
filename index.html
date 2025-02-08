@@ -1,10 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <style>
+ <html>
+ <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SF FITNESS</title>
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css">
+        *{
+            text-decoration: none;
+        }
+        .navbar{
+            background: black;font-family: calibri;padding-right: 15px;padding-left: 15px;
+        }
+        .navdiv{
+        display: flex;align-items: center;justify-content: space-between;
+        }
+        .logo a{
+            font-size: 35px;font-weight: 600;color: white;
+            
+        }
+        li{
+            list-style: none;display: inline-block;
+        }
+        li a{
+            color: white;font-size: 18px;font-weight: bold;margin-right: 25px;
+        }
+        button{
+            background-color: black;margin-left: 10px;border-radius: 10px;padding: 10px;width: 90px;
+        }
+        button a{
+            color: white;font-weight: bold;font-size: 15px;
+
+        }
+        body {
+        background-image: url('https://img.freepik.com/premium-photo/illustration-fitness-equipments-design-background_916191-39414.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;  
+        background-size: cover;
+         }
+         img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+a:hover{
+    color: orange;
+}
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button1 {background-color:black;} 
+.button2 {background-color: gray;}
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #000;
+            color: #fff;
+        }
+        .hero {
+            width: 100%;
+            height: 100vh;
+            background: url('https://source.unsplash.com/1600x900/?gym,fitness') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin: 20px 0;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            background: red;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background: darkred;
+        }
         * {
             margin: 0;
             padding: 0;
@@ -12,157 +125,149 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
+            overflow: hidden;
         }
 
-        header {
-            background: #007BFF;
-            color: white;
-            padding: 1rem 0;
-            text-align: center;
+        .slider-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
         }
 
-        header h1 {
-            font-size: 2.5rem;
-        }
-
-        nav ul {
-            list-style: none;
+        .slider {
             display: flex;
-            justify-content: center;
-            gap: 1rem;
+            width: 700%; /* Extra 1 slide for seamless transition */
+            height: 100%;
+            transition: transform 1s ease-in-out;
         }
 
-        nav ul li {
-            display: inline;
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            flex-shrink: 0;
         }
 
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.2rem;
-        }
+        /* Images */
+        .slide:nth-child(1) { background-image: url('https://img.freepik.com/premium-photo/illustration-fitness-equipments-design-background_916191-39414.jpg'); }
+        .slide:nth-child(2) { background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20230519/pngtree-an-old-gym-setting-with-dumbbells-image_2569910.jpg'); }
+        .slide:nth-child(3) { background-image: url('https://t3.ftcdn.net/jpg/07/22/97/48/360_F_722974827_pROY8q3LaX1cqc8lzToyAMeLyHU87gPk.jpg'); }
+        .slide:nth-child(4) { background-image: url('https://c4.wallpaperflare.com/wallpaper/316/651/796/smoke-working-out-wallpaper-preview.jpg'); }
+        .slide:nth-child(5) { background-image: url('https://wallpapers.com/images/hd/gym-motivation-image-vhotcjpkke7pstf3.jpg'); }
+        .slide:nth-child(6) { background-image: url('https://t3.ftcdn.net/jpg/09/00/92/90/360_F_900929083_uHJ6YHjEDw2IzcsU6AE1AvTOTlIGrWsQ.jpg'); }
+        .slide:nth-child(7) { background-image: url('https://media.gettyimages.com/id/1316572851/video/4k-video-footage-of-barbells-in-an-empty-gym.jpg?s=640x640&k=20&c=PCson57j2NIeEucdHlHi0bVykyqyfCDAjQFHY32nU8A='); } /* Duplicate of 1st image */
 
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
-
-        section {
-            padding: 2rem;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        .about {
-            background: #f4f4f4;
-            padding: 2rem;
-            border-radius: 10px;
-        }
-
-        .portfolio {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-        }
-
-        .portfolio img {
+        .nav-buttons {
+            position: absolute;
+            top: 50%;
             width: 100%;
-            border-radius: 10px;
-        }
-
-        .contact form {
             display: flex;
-            flex-direction: column;
-            gap: 1rem;
+            justify-content: space-between;
+            transform: translateY(-50%);
         }
 
-        .contact form input, .contact form textarea {
-            width: 100%;
-            padding: 0.8rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        .contact form button {
-            padding: 0.8rem;
-            background: #007BFF;
+        .nav-buttons button {
+            background: rgba(0, 0, 0, 0.5);
             color: white;
             border: none;
-            border-radius: 5px;
+            padding: 15px 20px;
+            font-size: 24px;
             cursor: pointer;
+            transition: 0.3s;
         }
 
-        .contact form button:hover {
-            background: #0056b3;
+        .nav-buttons button:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+    </style>  
+ </head>
+ <body>
+    <nav class="navbar">
+        <div class="logo">
+          <a href="#"><img src="assets/image/logo name.jpg" alt="Surya's fitness"></a>
+        </div>
+        <ul class="nav-links">
+    <nav class="navbar">
+ <div class="navdiv">
+    <div class="logo"><a href="#"></a> </div>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="ABOUT US.html">About us</a></li>
+        <li><a href="our trainers.html">Our trainers</a></li>
+        <li><a href="contact us.html">Contact us</a></li>
+       <button><a href="#">Visit us</a></button>
+    </ul>
+</nav>
+ </div>
+    </nav>
+    <div class="slider-container">
+        <div class="slider" id="slider">
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="slide"></div> <!-- Duplicate first image for smooth looping -->
+        </div>
+        
+        <!-- Navigation Buttons -->
+        <div class="nav-buttons">
+            <button onclick="prevSlide()">&#10094;</button>
+            <button onclick="nextSlide()">&#10095;</button>
+        </div>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const totalSlides = 6;
+        const slider = document.getElementById("slider");
+
+        function updateSlidePosition() {
+            slider.style.transition = "transform 1s ease-in-out";
+            slider.style.transform = `translateX(-${currentIndex * 100}vw)`;
         }
 
-        footer {
-            text-align: center;
-            background: #333;
-            color: white;
-            padding: 1rem;
-            margin-top: 2rem;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>My Portfolio</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="about">
-                <img src="assets/images/profile.jpg" alt="Myself Surya K M an Full stack Web Developer,Designer,And a Programer" style="width:150px; height:150px; border-radius:50%;">
-                <!-- Other content of the .about section -->
-            </div>
-        </nav>
-    </header>
-
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <p>Hi! I'm a Full Stack web developer passionate about building modern and responsive websites. Welcome to my portfolio!</p>
-    </section>
-
-    <section id="portfolio" class="portfolio">
-        <h2>My Work</h2>
-        <style>
-            .project-image {
-                width: 200px;
-                height: 200px;
-                object-fit: cover;
+        function nextSlide() {
+            currentIndex++;
+            updateSlidePosition();
+            if (currentIndex === totalSlides) {
+                setTimeout(() => {
+                    slider.style.transition = "none"; 
+                    currentIndex = 0;
+                    slider.style.transform = `translateX(0)`;
+                }, 1000); // Reset after animation
             }
-        </style>
-        <div>
-            <img src="assets/images/project 1.jpg" alt="Project 1 ">
-            <p>Project 1: Description of the project.</p>
-        </div>
-        <div>
-            <img src="assets/images/project 2.jpeg" alt="Project 2">
-            <p>Project 2: Description of the project.</p>
-        </div>
-        <div>
-            <img src="assets/images/project 3.jpg" alt="Project 3">
-            <p>Project 3: Description of the project.</p>
-        </div>
-    </section>
+        }
 
-    <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+        function prevSlide() {
+            if (currentIndex === 0) {
+                slider.style.transition = "none"; 
+                currentIndex = totalSlides;
+                slider.style.transform = `translateX(-${currentIndex * 100}vw)`;
+                setTimeout(() => {
+                    updateSlidePosition();
+                }, 50);
+            } else {
+                currentIndex--;
+                updateSlidePosition();
+            }
+        }
 
-    <footer>
-        <p>&copy; 2025 My Portfolio. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+        // Auto-slide every 5 seconds
+        setInterval(nextSlide, 5000);
+    </script>
+    <section class="hero">
+        <section class="about-section"></section>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Unleash Your Potential</h1>
+            <p>Join us today and achieve the body you’ve always dreamed of!</p>
+            <a href="#" class="btn">Get Started</a>
+        </div>
+    </section>  
+    
+ </body>  
+ </html> 
