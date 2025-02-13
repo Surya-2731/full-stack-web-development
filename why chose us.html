@@ -1,0 +1,135 @@
+<section class="choose_us_section">
+    <div class="container">
+        <div class="choose_us_content">
+            <h5>WHY CHOOSE US</h5>
+            <h2>BUILD YOUR BEST BODY</h2>
+        </div>
+        <div class="choose_us_flex">
+            <div class="choose_us_box_content">
+                <figure><img src="assets/image/machines1.png" alt="Machineless"></figure>
+                <h6>MACHINELESS</h6>
+                <p>Our gym focuses on natural, body-weight exercises, helping you build strength and stamina without relying on machines.</p>
+            </div>
+            <div class="choose_us_box_content">
+                <figure><img src="assets/image/expert training (2).png" alt="Expert Training"></figure>
+                <h6>EXPERT TRAINING</h6>
+                <p>Enjoy the energy of group sessions with expert trainers guiding you through every move, ensuring proper form and maximum results in a supportive environment.</p>
+            </div>
+            <div class="choose_us_box_content">
+                <figure><img src="assets/image/nutritions.png" alt="Nutrition Plans"></figure>
+                <h6>NUTRITION PLANS</h6>
+                <p>We don't just focus on workouts – our tailored nutrition plans are designed to complement your fitness goals, fueling your body for optimal performance and recovery.</p>
+            </div>
+            <div class="choose_us_box_content">
+                <figure><img src="assets/image/workout meal.png" alt="Workout Meals"></figure>
+                <h6>WORKOUT MEALS</h6>
+                <p>Our in-house meal service provides balanced, nutrient-rich meals that support your workout routine, ensuring you get the right fuel to recover and grow stronger.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>/* WHY CHOOSE US SECTION */
+  /* WHY CHOOSE US SECTION */
+.choose_us_section {
+    background-color: #f8f8f8; /* Light grey background */
+    padding: 80px 0;
+    text-align: center;
+}
+
+.choose_us_content h5 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff6600; /* Highlight color */
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.choose_us_content h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 40px;
+}
+
+/* FLEX CONTAINER FOR ITEMS */
+.choose_us_flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between items */
+    padding: 0 20px;
+}
+
+/* STYLING FOR EACH RECTANGLE ITEM */
+.choose_us_box_content {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    max-width: 300px;
+    min-height: 320px;
+    flex: 1;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.choose_us_box_content:hover {
+    transform: scale(1.05);
+}
+
+/* IMAGE STYLING */
+.choose_us_box_content figure {
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+}
+
+.choose_us_box_content img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* TEXT STYLING */
+.choose_us_box_content h6 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 15px;
+}
+
+.choose_us_box_content p {
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+    .choose_us_flex {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .choose_us_box_content {
+        flex: 1 1 calc(50% - 40px); /* Adjusting for smaller screens */
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .choose_us_flex {
+        flex-direction: column;
+        align-items: center;
+    }
+    .choose_us_box_content {
+        width: 100%;
+        max-width: 400px;
+    }
+}
