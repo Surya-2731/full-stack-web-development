@@ -1,0 +1,54 @@
+</script>
+<section class="inside-gym"> 
+  <h2>Inside Our Gym</h2> 
+  <div class="gym-gallery"> 
+      <div class="scroll-container">
+          <img src="https://i.pinimg.com/474x/d4/43/db/d443db171f84960ac827e3f9ddbb14b3.jpg" alt="Gym Image 1"> 
+          <img src="https://i.pinimg.com/474x/59/7d/9a/597d9ad3c1399e0d9023b1e5df900477.jpg" alt="Gym Image 2"> 
+          <img src="https://i.pinimg.com/474x/1f/71/2e/1f712eac8a6634ecc0bc09ecfe177d4f.jpg" alt="Gym Image 3"> 
+          <img src="https://i.pinimg.com/474x/b5/45/61/b54561c1436068325f0dd0e0850fea09.jpg" alt="Gym Image 4"> 
+          <img src="https://i.pinimg.com/736x/1c/2a/22/1c2a2269a0976bf950bcd2c88dc92b31.jpg" alt="Gym Image 5"> 
+          <img src="https://i.pinimg.com/474x/42/da/c8/42dac8c7e0c9ea0204ba8d1f0dcb909e.jpg" alt="Gym Image 6"> 
+          <img src="https://i.pinimg.com/474x/ef/ef/c1/efefc14397c8c105dd9616c8565e2ecb.jpg" alt="Gym Image 7"> 
+          <img src="https://i.pinimg.com/474x/11/76/2e/11762e7ff52d64e2e64dba8d5ff9982a.jpg" alt="Gym Image 8"> 
+          <img src="https://i.pinimg.com/736x/d2/c8/ad/d2c8ad885a0a3d5a665bec87c47b8358.jpg" alt="Gym Image 9"> 
+      </div>
+  </div> 
+</section> 
+
+<style> 
+  .inside-gym { 
+      text-align: center; 
+      padding: 50px 0; 
+      background-color: #ffffff; 
+      color: rgb(0, 0, 0); 
+  } 
+  .inside-gym h2 { 
+      font-size: 36px; 
+      margin-bottom: 20px; 
+  } 
+  .gym-gallery { 
+      overflow-x: auto; 
+      white-space: nowrap; 
+      padding: 10px; 
+  } 
+  .scroll-container {
+      display: flex;
+      gap: 20px;
+      scroll-snap-type: x mandatory;
+  }
+  .scroll-container img { 
+      width: 300px;  
+      height: auto;
+      border-radius: 10px; 
+      scroll-snap-align: start;
+      transition: transform 0.3s ease-in-out; 
+  } 
+  .scroll-container img:hover { 
+      transform: scale(1.05); 
+  } 
+  /* Hide scrollbar for a cleaner look */
+  .gym-gallery::-webkit-scrollbar {
+      display: none;
+  }
+</style>
