@@ -14,15 +14,21 @@
             text-decoration: none;
         }
         body {
-            background-color: #000;
+            background-color: #fff6f6;
             color: #fff;
         }
         .navbar {
-            background: black;
-            padding: 15px;
+            background: linear-gradient(90deg, #ff8000, #ff3300);
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
         .navbar ul {
             list-style: none;
@@ -37,7 +43,7 @@
             font-weight: bold;
         }
         .navbar ul li a:hover {
-            color: orange;
+            color: rgb(0, 0, 0);
         }
         button {
             background-color: black;
@@ -51,6 +57,7 @@
             font-weight: bold;
             font-size: 15px;
         }
+        
         .slider-container {
             position: relative;
             width: 100%;
@@ -113,6 +120,7 @@
             <div class="slide" style="background-image: url('https://c4.wallpaperflare.com/wallpaper/316/651/796/smoke-working-out-wallpaper-preview.jpg');"></div>
             <div class="slide" style="background-image: url('https://wallpapers.com/images/hd/gym-motivation-image-vhotcjpkke7pstf3.jpg');"></div>
             <div class="slide" style="background-image: url('https://t3.ftcdn.net/jpg/09/00/92/90/360_F_900929083_uHJ6YHjEDw2IzcsU6AE1AvTOTlIGrWsQ.jpg');"></div>
+            <div class="slide" style="background-image: url('https://i.pinimg.com/736x/d2/c8/ad/d2c8ad885a0a3d5a665bec87c47b8358.jpg');"></div>
         </div>
         <div class="nav-buttons">
             <button onclick="prevSlide()">&#10094;</button>
@@ -176,6 +184,7 @@
     </section>
     
     <style>
+        
         .about-section {
             display: flex;
             align-items: center;
@@ -274,11 +283,68 @@
             </div>
         </div>
     </section>
-    
+</div>
+<div class="scrolling-text-container">
+    <div class="scrolling-text">
+        <span>Book Your Free Trial !</span>
+        <span>Book Your Free Trial !</span>
+        <span>Book Your Free Trial !</span>
+        <span>Book Your Free Trial !</span>
+        <span>Book Your Free Trial !</span>
+        <span>Book Your Free Trial !</span>
+        <span>Book Your Free Trial !</span>
+        <span>Book Your Free Trial !</span>
+        <span>Book Your Free Trial !</span>
+        <span>Book Your Free Trial !</span>
+        <span>Book Your Free Trial !</span>
+        <span>Book Your Free Trial !</span>
+        <span>Book Your Free Trial !</span>
+        <span>Book Your Free Trial !</span>
+        <span>Book Your Free Trial !</span>
+        <span>Book Your Free Trial !</span>
+        <span>Book Your Free Trial !</span>
+        <span>Book Your Free Trial !</span>
+        
+    </div>
+</div>
+<style>
+.scrolling-text-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: #ffcc00; /* Change as needed */
+    padding: 10px 0;
+    white-space: nowrap;
+    position: relative;
+}
+
+.scrolling-text {
+    display: flex;
+    width: max-content;
+    animation: scrollText 30s linear infinite; /* Slow and smooth */
+}
+
+.scrolling-text span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    padding: 0 40px;
+    text-transform: uppercase;
+}
+
+/* Keyframe animation for seamless scrolling */
+@keyframes scrollText {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+</style>
     <style>
         .zigzag-section {
             padding: 50px 0;
-            background-color: #111;
+            background-color: #fffbfb;
         }
         .zigzag-container {
             width: 90%;
@@ -306,7 +372,7 @@
         .text {
             flex: 1;
             padding: 20px;
-            color: white;
+            color: rgb(0, 0, 0);
         }
         .text h2 {
             font-size: 32px;
@@ -350,6 +416,290 @@
             });
         });
     </script>
+  <section class="inside-gym"> 
+    <h2>Inside Our Gym</h2> 
+    <div class="gym-gallery"> 
+        <div class="scroll-container">
+            <img src="https://i.pinimg.com/474x/d4/43/db/d443db171f84960ac827e3f9ddbb14b3.jpg" alt="Gym Image 1"> 
+            <img src="https://i.pinimg.com/474x/59/7d/9a/597d9ad3c1399e0d9023b1e5df900477.jpg" alt="Gym Image 2"> 
+            <img src="https://i.pinimg.com/474x/1f/71/2e/1f712eac8a6634ecc0bc09ecfe177d4f.jpg" alt="Gym Image 3"> 
+            <img src="https://i.pinimg.com/474x/b5/45/61/b54561c1436068325f0dd0e0850fea09.jpg" alt="Gym Image 4"> 
+            <img src="https://i.pinimg.com/736x/1c/2a/22/1c2a2269a0976bf950bcd2c88dc92b31.jpg" alt="Gym Image 5"> 
+            <img src="https://i.pinimg.com/474x/42/da/c8/42dac8c7e0c9ea0204ba8d1f0dcb909e.jpg" alt="Gym Image 6"> 
+            <img src="https://i.pinimg.com/474x/ef/ef/c1/efefc14397c8c105dd9616c8565e2ecb.jpg" alt="Gym Image 7"> 
+            <img src="https://i.pinimg.com/474x/11/76/2e/11762e7ff52d64e2e64dba8d5ff9982a.jpg" alt="Gym Image 8"> 
+            <img src="https://i.pinimg.com/736x/d2/c8/ad/d2c8ad885a0a3d5a665bec87c47b8358.jpg" alt="Gym Image 9"> 
+        </div>
+    </div> 
+</section> 
+
+<style> 
+    .inside-gym { 
+        text-align: center; 
+        padding: 50px 0; 
+        background-color: #ffffff; 
+        color: rgb(0, 0, 0); 
+    } 
+    .inside-gym h2 { 
+        font-size: 36px; 
+        margin-bottom: 20px; 
+    } 
+    .gym-gallery { 
+        overflow-x: auto; 
+        white-space: nowrap; 
+        padding: 10px; 
+        scrollbar-width: thin;  /* For Firefox */
+        scrollbar-color: #888 #f1f1f1; /* Scrollbar thumb and track */
+    } 
+    .scroll-container {
+        display: flex;
+        gap: 20px;
+        scroll-snap-type: x mandatory;
+    }
+    .scroll-container img { 
+        width: 300px;  
+        height: auto;
+        border-radius: 10px; 
+        scroll-snap-align: start;
+        transition: transform 0.3s ease-in-out; 
+    } 
+    .scroll-container img:hover { 
+        transform: scale(1.05); 
+    } 
+    /* Scrollbar for WebKit browsers */
+    .gym-gallery::-webkit-scrollbar {
+        height: 8px;
+    }
+    .gym-gallery::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+    }
+    .gym-gallery::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 10px;
+    }
+    .gym-gallery::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+</style>
+    
+
+</style>
+<section class="choose_us_section">
+    <div class="container">
+        <div class="choose_us_content">
+            <h5>WHY CHOOSE US</h5>
+            <h2>BUILD YOUR BEST BODY</h2>
+        </div>
+        <div class="choose_us_flex">
+            <div class="choose_us_box_content">
+                <figure><img src="assets/image/machines1.png" alt="Machineless"></figure>
+                <h6>MACHINELESS</h6>
+                <p>Our gym focuses on natural, body-weight exercises, helping you build strength and stamina without relying on machines.</p>
+            </div>
+            <div class="choose_us_box_content">
+                <figure><img src="assets/image/expert training (2).png" alt="Expert Training"></figure>
+                <h6>EXPERT TRAINING</h6>
+                <p>Enjoy the energy of group sessions with expert trainers guiding you through every move, ensuring proper form and maximum results in a supportive environment.</p>
+            </div>
+            <div class="choose_us_box_content">
+                <figure><img src="assets/image/nutritions.png" alt="Nutrition Plans"></figure>
+                <h6>NUTRITION PLANS</h6>
+                <p>We don't just focus on workouts – our tailored nutrition plans are designed to complement your fitness goals, fueling your body for optimal performance and recovery.</p>
+            </div>
+            <div class="choose_us_box_content">
+                <figure><img src="assets/image/workout meal.png" alt="Workout Meals"></figure>
+                <h6>WORKOUT MEALS</h6>
+                <p>Our in-house meal service provides balanced, nutrient-rich meals that support your workout routine, ensuring you get the right fuel to recover and grow stronger.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>/* WHY CHOOSE US SECTION */
+  /* WHY CHOOSE US SECTION */
+.choose_us_section {
+    background-color: #f8f8f8; /* Light grey background */
+    padding: 80px 0;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+    border: 2px solid #ff8000
+}
+
+.choose_us_content h5 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff6600; /* Highlight color */
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.choose_us_content h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 40px;
+}
+
+/* FLEX CONTAINER FOR ITEMS */
+.choose_us_flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between items */
+    padding: 0 20px;
+}
+
+/* STYLING FOR EACH RECTANGLE ITEM */
+.choose_us_box_content {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    max-width: 300px;
+    min-height: 320px;
+    flex: 1;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.choose_us_box_content:hover {
+    transform: scale(1.05);
+}
+
+/* IMAGE STYLING */
+.choose_us_box_content figure {
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+}
+
+.choose_us_box_content img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* TEXT STYLING */
+.choose_us_box_content h6 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 15px;
+}
+
+.choose_us_box_content p {
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+    .choose_us_flex {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .choose_us_box_content {
+        flex: 1 1 calc(50% - 40px); /* Adjusting for smaller screens */
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .choose_us_flex {
+        flex-direction: column;
+        align-items: center;
+    }
+    .choose_us_box_content {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+    </style>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>SF FITNESS</h3>
+                <p>Your journey to fitness starts here! Join us today and transform your body and mind.</p>
+            </div>
+            <div class="footer-hours">
+                <h4>Opening Hours</h4>
+                <ul>
+                    <li>Monday - Friday: 6:00 AM - 10:00 PM</li>
+                    <li>Saturday: 8:00 AM - 8:00 PM</li>
+                    <li>Sunday: Closed</li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>Address: 123 Fitness Street, Gym City, Country</p>
+                <p>Phone: 7904709247</p>
+                <p>Email: contact@sffitness.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SF Fitness. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <style>
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 40px 0;
+        }
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .footer-info, .footer-hours, .footer-contact {
+            flex: 1;
+            padding: 0 20px;
+        }
+        .footer-info h3 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+        .footer-info p {
+            font-size: 16px;
+        }
+        .footer-hours h4, .footer-contact h4 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .footer-hours ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .footer-hours ul li {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        .footer-contact p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+        .footer-bottom {
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+            margin-top: 30px;
+        }
+        .footer-bottom p {
+            font-size: 14px;
+        }
+    </style>
     
 </body>
 </html>
