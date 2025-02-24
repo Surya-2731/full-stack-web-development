@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SF FITNESS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background: linear-gradient(90deg, #ff8000, #ff3300);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo a {
+            font-size: 32px;
+            font-weight: bold;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            color: rgb(255, 251, 251);
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+            padding: 5px 10px;
+        }
+
+        .nav-links a:hover {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+
+        .visit-btn {
+            background: white;
+            color: #ff3300;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .visit-btn:hover {
+            background: #ffd700;
+            color: black;
+        }
+
+        /* Hero Section with dynamic background */
+        .hero {
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+            transition: background-image 1s ease-in-out;
+        }
+
+        /* Trainers Section */
+        .trainers {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .trainer-card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 280px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+            border: 2px solid #ff8000;
+        }
+
+        .trainer-card:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .trainer-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border: 3px solid #ff3300;
+        }
+
+        .trainer-card h3 {
+            color: #222;
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+
+        .trainer-card p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        /* Social Media Section */
+        .social-links {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .social-links a {
+            margin: 10px;
+            display: inline-block;
+            color: #ffcc00;
+            font-size: 24px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #34040f;
+        }
+        /* Diet Plan Section */
+.diet-plan {
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.diet-plan h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ff3300;
+    margin-bottom: 20px;
+}
+
+.diet-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.diet-box {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+    border: 3px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.diet-box h3 {
+    color: #ff3300;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.diet-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.diet-box ul li {
+    color: #444;
+    font-size: 16px;
+    padding: 5px 0;
+}
+
+/* Hover Effect */
+.diet-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border: 3px solid #ff8000;
+}
+
+/* Adding a cool bottom border effect */
+.diet-box::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #ff8000, #ff3300);
+    transition: width 0.4s ease-in-out, left 0.4s ease-in-out;
+}
+
+.diet-box:hover::after {
+    width: 100%;
+    left: 0;
+}
+a {
+    text-decoration: none;
+    font-size: 20px;
+    margin: 10px;
+    color: black;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #ff3300;
+}
+
+i {
+    margin-right: 8px;
+}
+.footer {
+            background-color: #333;
+            color: white;
+            padding: 40px 0;
+        }
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .footer-info, .footer-hours, .footer-contact {
+            flex: 1;
+            padding: 0 20px;
+        }
+        .footer-info h3 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+        .footer-info p {
+            font-size: 16px;
+        }
+        .footer-hours h4, .footer-contact h4 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .footer-hours ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .footer-hours ul li {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        .footer-contact p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+        .footer-bottom {
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+            margin-top: 30px;
+        }
+        .footer-bottom p {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo"><a href="#">ATOM FITNESS</a></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ABOUT US.html">About Us</a></li>
+            <li><a href="#">Our Trainers</a></li>
+            <li><a href="contact us.html">Contact Us</a></li>
+        </ul>
+        <a href="#visit" class="visit-btn">Visit Us</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero" id="hero">Train Hard, Stay Fit!</div>
+
+    <!-- Trainers Section -->
+    <h1 style="text-align:center; font-size: 36px; font-weight: bold; color: #ff3300; margin-top: 20px; font-family: 'Poppins', sans-serif;">
+        Meet Our Trainers
+    </h1>
+
+    <div class="trainers" id="trainers">
+        <div class="trainer-card">
+            <img src="assets/image/surya.jpeg" alt="Trainer 1">
+            <h3>SURYA</h3>
+            <p>Expert in Strength Training</p>
+        </div>
+        <div class="trainer-card">
+            <img src="assets/image/gym4.jpg" alt="Trainer 2">
+            <h3>BADHMESHWAR</h3>
+            <p>Yoga & Wellness Coach</p>
+        </div>
+        <div class="trainer-card">
+            <img src="assets/image/gym2.jpg" alt="Trainer 3">
+            <h3>KATHIERSHAN</h3>
+            <p>Cardio & HIIT Specialist</p>
+        </div>
+    </div>
+<!-- Diet Plan Section -->
+<div class="diet-plan">
+    <h1>Diet Plan for a Healthy Lifestyle</h1>
+    <div class="diet-container">
+        <div class="diet-box">
+            <h3>Breakfast</h3>
+            <ul>
+                <li>Oatmeal with fruits and nuts</li>
+                <li>Boiled eggs or scrambled eggs</li>
+                <li>Whole grain toast with peanut butter</li>
+            </ul>
+        </div>
+        <div class="diet-box">
+            <h3>Lunch</h3>
+            <ul>
+                <li>Grilled chicken or tofu with brown rice</li>
+                <li>Steamed vegetables</li>
+                <li>Mixed green salad with olive oil dressing</li>
+            </ul>
+        </div>
+        <div class="diet-box">
+            <h3>Snacks</h3>
+            <ul>
+                <li>Greek yogurt with honey</li>
+                <li>Handful of almonds or walnuts</li>
+                <li>Protein shake</li>
+            </ul>
+        </div>
+        <div class="diet-box">
+            <h3>Dinner</h3>
+            <ul>
+                <li>Grilled salmon or paneer</li>
+                <li>Quinoa or sweet potatoes</li>
+                <li>Steamed broccoli and carrots</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <!-- Social Media Section -->
+    <div class="social-links">
+        <h2>Follow Us</h2>
+        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
+<a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+<a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>ATOM FITNESS</h3>
+                <p>Your journey to fitness starts here! Join us today and transform your body and mind.</p>
+            </div>
+            <div class="footer-hours">
+                <h4>Opening Hours</h4>
+                <ul>
+                    <li>Monday - Friday: 6:00 AM - 10:00 PM</li>
+                    <li>Saturday: 8:00 AM - 8:00 PM</li>
+                    <li>Sunday: Closed</li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>Address: 123 Fitness Street, Gym City, Country</p>
+                <p>Phone: 7904709247</p>
+                <p>Email: contact@sffitness.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SF Fitness. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- JavaScript for Background Image Slideshow -->
+    <script>
+        const hero = document.getElementById('hero');
+
+        const images = [
+            'https://i.pinimg.com/474x/ef/ef/c1/efefc14397c8c105dd9616c8565e2ecb.jpg',
+            'https://i.pinimg.com/474x/b5/45/61/b54561c1436068325f0dd0e0850fea09.jpg',
+            'https://i.pinimg.com/736x/1c/2a/22/1c2a2269a0976bf950bcd2c88dc92b31.jpg',
+            'https://i.pinimg.com/474x/59/7d/9a/597d9ad3c1399e0d9023b1e5df900477.jpg'
+        ];
+
+        let index = 0;
+
+        function changeBackground() {
+            hero.style.backgroundImage = `url(${images[index]})`;
+            hero.style.transition = 'background-image 1s ease-in-out';
+            index = (index + 1) % images.length;
+        }
+
+        setInterval(changeBackground, 4000); // Change background every 4 seconds
+    </script>
+</body>
+</html>
