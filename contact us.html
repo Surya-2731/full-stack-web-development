@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - SF FITNESS</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .logo a {
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: orange;
+        }
+
+        .visit-btn {
+            background: orange;
+            padding: 10px 15px;
+            border-radius: 5px;
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .visit-btn:hover {
+            background: darkorange;
+        }
+
+        /* Header Section */
+        .contact-header {
+            background: linear-gradient(90deg, #ff8000, #ff3300);
+            color: white;
+            text-align: center;
+            padding: 80px 20px 40px;
+            margin-top: 60px;
+        }
+
+        .contact-header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .contact-header p {
+            font-size: 18px;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 40px;
+        }
+
+        .contact-info, .contact-form {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 2px solid #ff8000;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: #ff3300;
+        }
+
+        .contact-form button {
+            background: #ff3300;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .contact-form button:hover {
+            background: #ff8000;
+        }
+
+        /* Map Section */
+        .map-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .map-container h2 {
+            font-size: 24px;
+            color: #ff3300;
+            margin-bottom: 20px;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 40px 0;
+        }
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .footer-info, .footer-hours, .footer-contact {
+            flex: 1;
+            padding: 0 20px;
+        }
+        .footer-info h3 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+        .footer-info p {
+            font-size: 16px;
+        }
+        .footer-hours h4, .footer-contact h4 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .footer-hours ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .footer-hours ul li {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        .footer-contact p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+        .footer-bottom {
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+            margin-top: 30px;
+        }
+        .footer-bottom p {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo"><a href="#">ATOM FITNESS</a></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ABOUT US.html">About</a></li>
+            <li><a href="our trainers.html">Our Trainers</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <a href="#visit" class="visit-btn">Visit Us</a>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="contact-header">
+        <h1>Contact Us</h1>
+        <p>We’d love to hear from you! Reach out to us for any queries.</p>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-container">
+        <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <p><strong>📍 Address:</strong> 123 Fitness Street, New Delhi, India</p>
+            <p><strong>📞 Phone:</strong> +91 98765 43210</p>
+            <p><strong>📧 Email:</strong> contact@sf-fitness.com</p>
+            <p><strong>⏰ Timings:</strong> Mon - Sat: 6 AM - 10 PM</p>
+        </div>
+
+        <div class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Google Map -->
+    <section class="map-container">
+        <h2>Our Location</h2>
+        <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.1234567890123!2d77.12345678901234!3d11.12345678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859d123456789%3A0x123456789abcdef!2sSF%20FITNESS%20Idigarai!5e0!3m2!1sen!2sin!4v1611234567890!5m2!1sen!2sin"
+            width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>ATOM FITNESS</h3>
+                <p>Your journey to fitness starts here! Join us today and transform your body and mind.</p>
+            </div>
+            <div class="footer-hours">
+                <h4>Opening Hours</h4>
+                <ul>
+                    <li>Monday - Friday: 6:00 AM - 10:00 PM</li>
+                    <li>Saturday: 8:00 AM - 8:00 PM</li>
+                    <li>Sunday: Closed</li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>Address: 123 Fitness Street, Gym City, Country</p>
+                <p>Phone: 7904709247</p>
+                <p>Email: contact@sffitness.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SF Fitness. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
